@@ -1,5 +1,4 @@
 import React from 'react'
-import ButtonC from "../../components/ButtonC"
 import { Button } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Padding } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Works'];
@@ -29,7 +28,7 @@ const Header = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-      Web Developer
+     <Link to="/"> Web Developer</Link>
         {/* <img className='h-20 w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcmyQ8qxnzmMCy4TiW9uPnFmRZupoowfhzFVyWP4voA&s" alt="" /> */}
       </Typography>
       <Divider />
@@ -67,11 +66,13 @@ const Header = (props) => {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             {/* <img className='h-10 w-40' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcmyQ8qxnzmMCy4TiW9uPnFmRZupoowfhzFVyWP4voA&s" alt="" /> */}
-        Web Developer
+            <Link to="/"> Web Developer </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }} >
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#fff' }} 
+              
+            >
                 {item}
               </Button>
             ))}

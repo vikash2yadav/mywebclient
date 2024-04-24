@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import CallIcon from '@mui/icons-material/Call';
 import MailIcon from '@mui/icons-material/Mail';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -8,9 +8,6 @@ import { Link } from 'react-router-dom';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { useFormik } from 'formik';
-// import { emailSubscriberInitialValues, emailSubscriberSchema } from './Schema';
-// import {addEmailSubscriberApi} from '../../Apis/footer'
-// import SnackBar from '../SnackBar';
 
 const Footer = (props) => {
     const [open, setOpen] = useState(false);
@@ -18,22 +15,10 @@ const Footer = (props) => {
     const [status, setStatus] = useState('');
 
     const formik = useFormik({
-        // initialValues: emailSubscriberInitialValues,
-        // validationSchema: emailSubscriberSchema,
         onSubmit: async (values) => {
-            // let data = await addEmailSubscriberApi(values);
-            let data;
-            if (data.status === 200) {
-                setOpen(true);
-                setStatus(true);
-                setMessage(data.data.message);
-            } else {
-                setOpen(true);
-                setStatus(false);
-                setMessage(data.data.message)
-            }
+            // Add your form submission logic here
         },
-    })
+    });
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -108,21 +93,16 @@ const Footer = (props) => {
                             <h1 className='text-m mb-5'>Subscribe</h1>
 
                             <form onSubmit={formik.handleSubmit}>
-                            {/* {formik.errors.email && formik.touched.email ? (
-                                <p className='text-red-500 text-xs'>{formik.errors.email}</p>
-                            ) : null}    */}
-                            <div className='flex mb-0.5'>
-                            
-                                <input type="email" 
-                            name="email"
-                            onChange={formik.handleChange}
-                            // value={formik.values.email} 
-                            placeholder='Email address' className='p-1 text-red-700 ' />
-                                <button type="submit" style={styles.subsButton} className='p-1 px-2'>Subscribe</button>
-                            </div>
+                                <div className='flex mb-0.5'>
+                                    <input type="email"
+                                        name="email"
+                                        onChange={formik.handleChange}
+                                        placeholder='Email address' className='p-1 text-red-700 ' />
+                                    <button type="submit" style={styles.subsButton} className='p-1 px-2'>Subscribe</button>
+                                </div>
                             </form>
 
-                            <p className='text-xs' style={styles.linkList}> Get notify on this email address</p>
+                            <p className='text-xs' style={styles.linkList}> Get notified on this email address</p>
 
                         </div>
                     </div>
@@ -133,9 +113,9 @@ const Footer = (props) => {
                     <p className='text-sm w-full' style={styles.linkList}>copyright © 2024 | All rights reserved |
                         <Link className='text-blue-400 hover:text-red-700'> know more.. </Link> </p>
                     <div className='flex justify-end'>
-                        <Link><XIcon className='hover:text-red-700' style={styles.socialIcons}/></Link>
-                        <Link><FacebookIcon className='hover:text-red-700' style={styles.socialIcons}/></Link>
-                       <Link> <InstagramIcon className='hover:text-red-700' style={styles.socialIcons}/></Link>
+                        <Link><XIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
+                        <Link><FacebookIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
+                        <Link> <InstagramIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
                     </div>
                 </div>
 
@@ -155,11 +135,12 @@ const styles = {
     footer: {
         backgroundColor: '#333',
         color: '#fff',
-        padding: '50px 0',
+        padding: '50px ',
         fontFamily: 'Arial, sans-serif',
     },
     firstDiv: {
         textAlign: 'center',
+        width: '100%',
     },
     secondDiv: {
         color: '#fff',
@@ -178,6 +159,7 @@ const styles = {
         justifyContent: 'space-around',
         alignItems: 'flex-start',
         flexWrap: 'wrap',
+        width: '100%',
     },
     secondColumns: {
         flex: '1',
@@ -191,8 +173,8 @@ const styles = {
         listStyle: 'none',
         padding: '0',
         margin: '0',
-        color: 'rgb(166, 168, 169)'
-        ,hover:{
+        color: 'rgb(166, 168, 169)',
+        '&:hover': {
             color: 'red'
         }
     },
@@ -205,4 +187,4 @@ const styles = {
         color: 'white',
     }
 };
-export default Footer
+export default Footer;

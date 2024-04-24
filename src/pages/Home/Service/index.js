@@ -11,6 +11,9 @@ const Service = () => {
     <ServiceBox />
     <ServiceBox />
     <ServiceBox />
+    <ServiceBox />
+    <ServiceBox />
+    <ServiceBox />
     </div> 
     </div>
     </>
@@ -21,13 +24,16 @@ const styles = {
     maindiv: {
         width: '100%',
         height: 'auto',
-        backgroundColor: '#222',
+        backgroundColor: '#333',
         // display: 'flex',
-        padding: "50px"
+        padding: "100px"
       },
       seconddiv: {
         display: 'flex',
         flexDirection: 'row',
+        flexWrap: "wrap",
+        justifyContent: 'space-around'
+
       }
 }
 export default Service
