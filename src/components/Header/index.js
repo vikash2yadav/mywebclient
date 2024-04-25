@@ -14,11 +14,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact', 'Blog', 'Works'];
+const navItems = [
+  { component: 'Home', route: "/" },
+  // { component: "Project", route: '/projects' },
+  // { component: "Service", to: '#service' },
+  //  {component:"About", to:'#about'},
+  //  {component:"Work"},
+  //  {component:"Skill"}
+]
 
 const Header = (props) => {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -28,7 +37,7 @@ const Header = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-     <Link to="/"> Web Developer</Link>
+        <Link to="/"> Web Developer</Link>
         {/* <img className='h-20 w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcmyQ8qxnzmMCy4TiW9uPnFmRZupoowfhzFVyWP4voA&s" alt="" /> */}
       </Typography>
       <Divider />
@@ -36,7 +45,7 @@ const Header = (props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.component} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -67,15 +76,24 @@ const Header = (props) => {
           >
             {/* <img className='h-10 w-40' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcmyQ8qxnzmMCy4TiW9uPnFmRZupoowfhzFVyWP4voA&s" alt="" /> */}
             <Link
-            style={{fontFamily: "cursive"}}
-            to="/"> Web Developer </Link>
+              style={{ fontFamily: "cursive" }}
+              to="/"> Web Developer </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }} >
             {navItems.map((item) => (
-              <Button onClick={()=>{}} key={item} sx={{ color: '#fff' }} >
-                {item}
+
+              <Button onClick={() => {
+                navigate(item.route)
+              }} key={item} style={{ color: '#fff' }} >
+                {item.component}
               </Button>
+
             ))}
+
+            <button 
+            className=' mx-3 px-10 py-2 text-white hover:bg-white hover:text-gray-700'
+            style={{border: "1px solid white",
+            transition: 'all 0.5s'}}>Let`s Talk</button>
           </Box>
 
         </Toolbar>
@@ -97,7 +115,7 @@ const Header = (props) => {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{  }}>
+      <Box component="main" sx={{}}>
         <Toolbar />
       </Box>
     </Box>

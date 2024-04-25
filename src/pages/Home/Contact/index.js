@@ -27,7 +27,7 @@ const Contact = (props) => {
                       placeholder='Message'/>
                       </div>
             <div style={{textAlign: 'center'}}>
-              <ButtonC label="Submit" variant="contained" color="secondary" style={styles.button}/>
+              <ButtonC label="Send" variant="contained" color="secondary" style={styles.button}/>
             </div>
           </form>
         </div>
