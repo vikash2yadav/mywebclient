@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../Button';
-import ButtonC from '../ButtonC';
 
 const MainBox = () => {
   return (
@@ -10,11 +9,11 @@ const MainBox = () => {
           <div className='text-xl text-gray-200 mb-4' style={{ fontSize: '2.8rem' }}>This Is Mr. Vikash Yadav</div>
           <p style={{ color: 'rgb(166, 168, 169)', textAlign: 'center',fontFamily: "cursive" }} className='mb-8'>A full stack web developer, programmer and smart coder. </p>
 
-          <Button className="px-8 py-2.5 hover:bg-white hover:text-gray-700"
-            label="Say Hi !"
+          <Button className="py-3 px-6 hover:bg-white hover:text-gray-700"
+            label="View Works "
             style={{
               border: '1px solid white',
-              transition: '0.5s',
+              transition: 'all 0.5s',
           }}
           />
 

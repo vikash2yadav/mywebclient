@@ -4,8 +4,8 @@ import ServiceBox from '../../../components/ServiceBox'
 const Service = () => {
   return (
     <>
-      <div style={styles.maindiv}>
-        <h1 className='text-xl mb-10 text-gray-100 font-serif font-semibold' >My Services</h1>
+      <div id="#service" style={styles.maindiv}>
+        <h1 style={{fontSize:"30px"}} className='text-xl text-center mb-40 text-gray-700 font-serif font-semibold' >My Services</h1>
 
         <div style={styles.seconddiv}>
           <ServiceBox title="Web & Mobile Design" description="this is ecommerce web application" logo="https://e7.pngegg.com/pngimages/227/326/png-clipart-website-development-mobile-app-development-application-software-web-application-web-design-web-design-logo.png" />
@@ -24,7 +24,7 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#555',
+    backgroundColor: '#fff',
     // display: 'flex',
     padding: "100px",
   },
