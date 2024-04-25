@@ -24,7 +24,7 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#fff',
+    backgroundColor: '#666',
     // display: 'flex',
     padding: "100px",
   },
