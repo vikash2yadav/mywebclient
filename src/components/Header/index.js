@@ -49,7 +49,7 @@ const Header = (props) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: '#333' }}>
+      <AppBar component="nav" sx={{ backgroundColor: '#555' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -66,13 +66,13 @@ const Header = (props) => {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             {/* <img className='h-10 w-40' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcmyQ8qxnzmMCy4TiW9uPnFmRZupoowfhzFVyWP4voA&s" alt="" /> */}
-            <Link to="/"> Web Developer </Link>
+            <Link
+            style={{fontFamily: "cursive"}}
+            to="/"> Web Developer </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }} >
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} 
-              
-            >
+              <Button onClick={()=>{}} key={item} sx={{ color: '#fff' }} >
                 {item}
               </Button>
             ))}
