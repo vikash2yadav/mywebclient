@@ -133,7 +133,7 @@ const Footer = (props) => {
 }
 const styles = {
     footer: {
-        backgroundColor: '#333',
+        backgroundColor: '#1F2544',
         color: '#fff',
         padding: '50px ',
         fontFamily: 'Arial, sans-serif',

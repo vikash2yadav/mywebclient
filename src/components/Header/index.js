@@ -58,7 +58,7 @@ const Header = (props) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: '#555' }}>
+      <AppBar component="nav" sx={{ backgroundColor: '#474F7A' }}>
         <Toolbar>
           <IconButton
             color="inherit"

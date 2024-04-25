@@ -40,7 +40,7 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#555',
+    backgroundColor: '#474F7A',
     padding: "100px",
   },
   formContainer: {

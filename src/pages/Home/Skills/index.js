@@ -23,7 +23,7 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#444',
+    backgroundColor: '#1F2544',
     padding: "120px 100px",
     color: "white",
   },

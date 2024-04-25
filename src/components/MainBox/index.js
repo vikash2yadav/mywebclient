@@ -30,7 +30,7 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#666',
+    backgroundColor: '#81689D',
     display: 'flex',
     padding: '120px 100px',
     minHeight: "200px"
