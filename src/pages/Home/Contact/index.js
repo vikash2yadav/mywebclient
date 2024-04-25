@@ -5,7 +5,7 @@ const Contact = (props) => {
   return (
     <>
       <div style={styles.maindiv}>
-        <h1 id={`${props.title}`} className='text-xl mb-5 text-white font-semibold'>Contact Us</h1>
+        <h1 id={`${props.title}`} className='text-xl font-serif mb-10 text-gray-100 font-semibold'>Contact Us</h1>
 
         <div style={styles.formContainer}>
           <form style={styles.form}>
@@ -27,7 +27,7 @@ const Contact = (props) => {
                       placeholder='Message'/>
                       </div>
             <div style={{textAlign: 'center'}}>
-              <ButtonC label="Send" variant="contained" color="secondary" style={styles.button}/>
+              <ButtonC label="Submit" variant="contained" color="secondary" style={styles.button}/>
             </div>
           </form>
         </div>
@@ -41,7 +41,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     backgroundColor: '#555',
-    padding: "100px"
+    padding: "100px",
   },
   formContainer: {
     display: 'flex',

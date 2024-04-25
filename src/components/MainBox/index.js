@@ -7,20 +7,14 @@ const MainBox = () => {
     <>
       <div style={styles.maindiv}>
         <div style={styles.firsthalf}>
-          <div className='text-xl mb-4' style={{ fontSize: '2.5rem',  fontFamily: "cursive", color: 'white' }}>This is Mr. vikash yadav</div>
+          <div className='text-xl text-gray-200 mb-4' style={{ fontSize: '2.8rem' }}>This Is Mr. Vikash Yadav</div>
           <p style={{ color: 'rgb(166, 168, 169)', textAlign: 'center',fontFamily: "cursive" }} className='mb-8'>A full stack web developer, programmer and smart coder. </p>
-          
-          {/* <ButtonC variant="outlined" 
-          style={{ borderColor: 'white', color: 'white' }} 
-          label="Hire Me !" 
-          /> */}
 
-          <Button className="px-5 py-2"
+          <Button className="px-8 py-2.5 hover:bg-white hover:text-gray-700"
             label="Say Hi !"
             style={{
-              color: 'white',
               border: '1px solid white',
-              borderRadius: '5px'
+              transition: '0.5s',
           }}
           />
 
@@ -37,9 +31,9 @@ const styles = {
   maindiv: {
     width: '100%',
     height: 'auto',
-    backgroundColor: '#555',
+    backgroundColor: '#666',
     display: 'flex',
-    padding: '100px',
+    padding: '120px 100px',
     minHeight: "200px"
   },
   firsthalf: {
