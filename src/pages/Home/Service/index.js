@@ -38,7 +38,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: "wrap",
-    justifyContent: 'space-evenly'
+    justifyContent: 'center'
   }
 }
 export default Service

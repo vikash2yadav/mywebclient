@@ -30,14 +30,14 @@ const ServiceBox = (props) => {
 const styles = {
   maindiv: {
     border: '1px solid white',
-    padding: "30px ",
+    padding: "20px",
     marginBottom: "30px",
     textAlign: "center",
-    width: "350px",
+    width: "300px",
     fontFamily: "Arial",
     height: "300px",
     transition: 'all 0.5s',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)', // Add box shadow here
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)', 
   },
   imageMainDiv: {
     display: "flex",

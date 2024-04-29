@@ -16,12 +16,12 @@ const Footer = (props) => {
                 <div style={styles.secondDiv}>
                     <div style={styles.secondContainer}>
 
-                        <div style={styles.secondColumns}>
+                        <div style={styles.secondColumns} >
                             <h1 className='text-2xl font-semibold mb-10'>About</h1>
                             <div className='flex text-m' style={{ flexDirection: "column" }}>
                                 <div className='mb-20 text-m' style={styles.aboutinfo}> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                                 </div>
-                                <div className='flex justify-start align-start'>
+                                <div className='flex justify-start align-start mb-10'>
                                     <span className='mx-2 bg-gray-600 p-3' style={{ borderRadius: "50%" }}>
                                        <Link> <WhatsAppIcon /></Link>
                                     </span>
@@ -94,7 +94,7 @@ const styles = {
         padding: '50px 0px',
         marginLeft: "0px",
         display: 'flex',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
     },
     secondColumns: {
         flex: '1',

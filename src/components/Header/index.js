@@ -22,7 +22,6 @@ const navItems = [
   { component: "About", to: '#about' },
   { component: "Service", to: '#service' },
   { component: "Project", route: '/projects' },
-  {component:"Skill", route: '/skill'},
    {component:"Blog", route: '/blog'},
    {component:"Contact", route: '/contact'},
 
