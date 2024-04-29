@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const SmallBox = (props) => {
   return (
     <>
-      <div className='mx-5 h-30 hover:shadow-md' style={styles.maindiv} >
+      <div className='h-20 hover:shadow-md' style={styles.maindiv} >
         <div style={styles.imageMainDiv}>
 
         </div>
@@ -12,12 +12,9 @@ const SmallBox = (props) => {
           className='text-black text-4xl font-bold text-red-600 mb-3'>{props.title}</h1>
 
         <p className='text-m text-gray-500'>
-          {props.add ? (props.add)
-            : (<Link className='text-xl text-gray-600'>    
-              {props.description}
-            </Link>
-            )
-          }
+          <div className='text-xl text-gray-600'>
+            {props.description}
+          </div>
         </p>
       </div>
     </>
@@ -30,7 +27,7 @@ const styles = {
     border: '1px solid white',
     borderRadius: "5px",
     padding: "20px 10px",
-    paddingBottom:"30px",
+    paddingBottom: "30px",
     textAlign: "center",
     width: "250px",
     height: "auto",

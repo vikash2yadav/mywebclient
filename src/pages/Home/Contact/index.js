@@ -5,13 +5,15 @@ import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailIcon from '@mui/icons-material/Mail';
 import { TfiWorld } from "react-icons/tfi";
+import Input from "../../../components/Input"
+import TextArea from "../../../components/TextArea"
 
 const Contact = (props) => {
   return (
     <>
       <div style={styles.maindiv}>
         <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Contact Me</h1>
-        <div className='w-full h-1 mb-4 flex justify-center '>
+        <div className='w-full h-1 mb-8 flex justify-center '>
           <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
           </div>
         </div>
@@ -30,24 +32,23 @@ const Contact = (props) => {
           <form style={styles.form}>
             <p className='text-xs font-semibold text-red-600 mb-1'>We will find you.</p>
             <div style={styles.inputGroup}>
-              <input type="text"
+              <Input type="text"
                 placeholder='Name'
                 style={styles.input}
                 className='mx-0' />
-              <input type="email"
+              <Input type="email"
                 placeholder='Email'
                 style={styles.input}
                 className='mx-0' />
-              <input type="tel"
+              <Input type="tel"
                 placeholder='Phone'
                 style={styles.input}
                 className='mx-0' />
-              <textarea className=''
+              <TextArea className=''
                 style={{ ...styles.input, height: "100px" }}
                 placeholder='Message' />
             </div>
             <div style={{ textAlign: 'center' }}>
-              {/* <ButtonC label="Send" variant="contained" color="secondary" style={styles.button}/> */}
 
               <Button label="Send"
                 className="bg-red-600 hover:bg-white hover:text-gray-700 w-full border border-solid border-1 border-red-600 px-4 py-2 font-serif text-white rounded-lg" />
@@ -84,7 +85,7 @@ const styles = {
   inputGroup: {
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: '5px',
+    marginBottom: '3px',
   },
   input: {
     color: 'black',
@@ -92,7 +93,7 @@ const styles = {
     backgroundColor: '#f4f1f1',
     border: '0.5px solid gray',
     borderRadius: "5px",
-    marginBottom: '10px',
+    marginBottom: '8px',
     width: '100%',
   },
   button: {

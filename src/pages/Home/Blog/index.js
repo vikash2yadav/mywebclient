@@ -8,7 +8,7 @@ const Blog = (props) => {
             <div style={styles.maindiv}>
                 <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Our Blogs</h1>
 
-                <div className='w-full h-1 mb-4 flex justify-center '>
+                <div className='w-full h-1 mb-8 flex justify-center '>
                     <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
                     </div>
                 </div>
@@ -20,13 +20,6 @@ const Blog = (props) => {
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A BEGINNER" description="Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean." />
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A " description="Separated they live in Bookmarksgrove right at the coast ." />
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A BEGINNER" description="Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean." />
-                {/* <Button
-                    style={{
-                        textAlign: 'center', border: "1px solid red",
-                        transition: 'all 0.5s'
-                    }}
-                    className="font-semibold font-sans w-full p-4 mt-5 bg-red-600 text-white hover:bg-white hover:text-gray-700"
-                    label="Load More " /> */}
                 </div>
             </div>
         </>
@@ -39,6 +32,7 @@ const styles = {
         height: 'auto',
         backgroundColor: '#fff',
         padding: "100px 20px",
+        marginBottom: "100px"
     },
     seconddiv: {
         display: 'flex',

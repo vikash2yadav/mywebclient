@@ -7,7 +7,7 @@ const Service = () => {
       <div id="#service" style={styles.maindiv}>
         <h1 style={{ fontSize: "40px" }} className='text-xl text-center mb-4 text-gray-700 font-serif font-semibold' >My Services</h1>
 
-        <div className='w-full h-1 mb-4 flex justify-center '>
+        <div className='w-full h-1 mb-8 flex justify-center '>
           <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
           </div>
         </div>
@@ -38,8 +38,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: "wrap",
-    justifyContent: 'space-evenly'
-
+    justifyContent: 'center'
   }
 }
 export default Service
