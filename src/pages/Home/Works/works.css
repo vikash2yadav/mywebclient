@@ -1,4 +1,3 @@
 .img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    transform: scale(1.1); /* Scale the image to 110% of its original size */
 }

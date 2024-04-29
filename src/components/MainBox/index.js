@@ -1,52 +1,73 @@
-import React from 'react';
-import Button from '../Button';
+  import React from 'react';
+  import styled, { keyframes } from 'styled-components';
+  import Button from '../Button';
 
-const MainBox = () => {
-  return (
-    <>
-      <div style={styles.maindiv}>
-        <div style={styles.firsthalf}>
-          <div className='text-xl text-gray-200 mb-4' style={{ fontSize: '2.8rem' }}>This Is Mr. Vikash Yadav</div>
-          <p style={{ color: 'rgb(166, 168, 169)', textAlign: 'center',fontFamily: "cursive" }} className='mb-8'>A full stack web developer, programmer and smart coder. </p>
+  const typingAnimation = keyframes`
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  `;
 
-          <Button className="py-3 px-6 hover:bg-white hover:text-gray-700"
-            label="View Works "
-            style={{
-              border: '1px solid white',
-              transition: 'all 0.5s',
-          }}
-          />
+  const RotatingText = styled.p`
+    color: red; /* Set the color here */
+    overflow: hidden; /* Hide overflowing text */
 
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: bottom;
+      width: 0;
+      height: 0.2em; /* Adjust based on font size */
+      background-color: currentColor; /* Use same color as text */
+      animation: ${typingAnimation} 3s steps(40, end) infinite;
+    }
+  `;
+
+  const rotateText = keyframes`
+  0% { content: "Web Designer"; }
+    20% { content: "Mr. Vikash Yadav"; }
+    40% { content: "Programmer"; }
+    60% { content: "Android Developer"; }
+    80% { content: "Web Developer"; }
+    100% { content: "Coder"; }
+  `;
+
+  const RotatingText2 = styled.p`
+    color: red; /* Set the color here */
+    
+    &::after {
+      content: "";
+      animation: ${rotateText} 10s linear infinite;
+    }
+  `;
+
+  const MainBox = () => {
+    return (
+      <>
+        <div className="flex justify-center items-center bg-gray-200 p-40 text-center" style={{ background: 'linear-gradient(to left, white 50%, #e6e1e1 50%)' }}>
+          <div className="text-xl text-gray-700 px-10">
+
+    
+            <h1 style={{ fontFamily: "Arial, sans-serif", letterSpacing: "0.2em", fontWeight: "800" }}
+            className="text-sm font-semibold mb-4 text-red-600">HEY! I AM</h1>
+              <RotatingText2 style={{ fontFamily: "Arial, sans-serif", fontWeight: "700" }}
+                className="text-5xl mb-0">
+            </RotatingText2>
+            {/* <h1 style={{ fontFamily: "Arial, sans-serif", fontWeight: "700" }} className="text-6xl mb-0">Mr. Vikash Yadav</h1> */}
+            <RotatingText style={{ fontFamily: "Arial, sans-serif", letterSpacing: "0.1em",}}
+              className="mb-8 font-semibold">
+            </RotatingText>
+            <Button
+              className="py-3 px-6 border border-solid border-1 border-red-600 bg-red-600 text-white hover:bg-white hover:text-gray-700 transition-all duration-500"
+              label="View Works"
+            />
+          </div>
         </div>
-        <div style={styles.secondhalf}>
-          <img width={"300px"} src="https://img.freepik.com/premium-photo/blue-circle-with-man-s-head-circle-with-white-background_745528-3499.jpg" alt="" />
-        </div>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  };
 
-const styles = {
-  maindiv: {
-    width: '100%',
-    height: 'auto',
-    backgroundColor: '#666',
-    display: 'flex',
-    padding: '120px 100px',
-    minHeight: "200px"
-  },
-  firsthalf: {
-    padding: '20px',
-    width: '50%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: 'white'
-  },
-  secondhalf: {
-    padding: "0px 100px"
-  }
-};
-
-export default MainBox;
+  export default MainBox;
