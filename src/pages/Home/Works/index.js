@@ -8,7 +8,7 @@ const Works = () => {
             <div style={styles.maindiv}>
                 <h1 style={{ fontSize: "40px" }} className='text-xl mb-4 text-center font-serif text-gray-700 font-semibold'>Our Projects</h1>
 
-                <div className='w-full h-1 mb-4 flex justify-center '>
+                <div className='w-full h-1 mb-8 flex justify-center '>
                     <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'></div>
                 </div>
 
@@ -56,7 +56,7 @@ const styles = {
         height: 'auto',
         backgroundColor: '#fff',
         color: "white",
-        marginBottom: "100px"
+        marginBottom: "250px"
     },
     seconddiv: {
         display: 'flex',
