@@ -7,125 +7,73 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link } from 'react-router-dom';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { useFormik } from 'formik';
 
 const Footer = (props) => {
-    const [open, setOpen] = useState(false);
-    const [message, setMessage] = useState(null);
-    const [status, setStatus] = useState('');
-
-    const formik = useFormik({
-        onSubmit: async (values) => {
-            // Add your form submission logic here
-        },
-    });
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-
-        setOpen(false);
-    };
-
     return (
         <>
             <footer style={styles.footer}>
-                <div style={styles.firstDiv}>
-                    {/* <div style={styles.container}>
-
-                        <div style={styles.column}>
-                            <h3 className='text-sky-300 mb-2'> <CallIcon /> </h3>
-                            <p className='text-xs'>+91 76986 61812 </p>
-                        </div>
-
-                        <div style={styles.column}>
-                            <h3 className='text-sky-300 mb-2'> <WhatsAppIcon /> </h3>
-                            <p className='text-xs'>+91 76986 61812 </p>
-                        </div>
-
-                        <div style={styles.column}>
-                            <h3 className='text-sky-300 mb-2'><MailIcon /></h3>
-                            <p className='text-xs'>vikash9412077@gmail.com</p>
-                        </div>
-
-                        <div style={styles.column}>
-                            <h3 className='text-sky-300 mb-2'><LocationOnIcon /></h3>
-                            <p className='text-xs'>
-                                29, abc complex, near ctm cross road, ahmedabad
-                            </p>
-                        </div>
-                    </div> */}
-                </div>
 
                 <div style={styles.secondDiv}>
-                    <div className='flex justify-start' style={styles.secondContainer}>
+                    <div style={styles.secondContainer}>
 
                         <div style={styles.secondColumns}>
-                            <h1 className='text-m mb-5'>About</h1>
-                            <ul className='text-xs' style={styles.linkList}>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Our story </Link> </li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Awards </Link></li>
-                                <li className='mb-0.5'> <Link to="/team" className='hover:text-red-700'> Our team </Link></li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Carrer </Link></li>
-                            </ul>
-                        </div>
-
-                        <div style={styles.secondColumns}>
-                            <h1 className='text-m mb-5'>Resources</h1>
-                            <ul className='text-xs' style={styles.linkList}>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Blog </Link> </li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Privacy policy </Link> </li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Terms & conditions </Link> </li>
-                            </ul>
-                        </div>
-
-                        <div style={styles.secondColumns}>
-                            <h1 className='text-m mb-5'>Works</h1>
-                            <ul className='text-xs' style={styles.linkList}>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> Projects</Link> </li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> For our society</Link> </li>
-                                <li className='mb-0.5'> <Link className='hover:text-red-700'> For us</Link></li>
-                            </ul>
-                        </div>
-
-                        <div style={styles.secondColumns}>
-                            <h1 className='text-m mb-5'>Subscribe</h1>
-
-                            <form onSubmit={formik.handleSubmit}>
-                                <div className='flex mb-0.5'>
-                                    <input type="email"
-                                        name="email"
-                                        onChange={formik.handleChange}
-                                        placeholder='Email address' className='p-1 text-red-700 ' />
-                                    <button type="submit" style={styles.subsButton} className='p-1 px-2'>Subscribe</button>
+                            <h1 className='text-2xl font-semibold mb-10'>About</h1>
+                            <div className='flex text-m' style={{ flexDirection: "column" }}>
+                                <div className='mb-20 text-m' style={styles.aboutinfo}> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                                 </div>
-                            </form>
+                                <div className='flex justify-start align-start'>
+                                    <span className='mx-2 bg-gray-600 p-3' style={{ borderRadius: "50%" }}>
+                                       <Link> <WhatsAppIcon /></Link>
+                                    </span>
 
-                            <p className='text-xs' style={styles.linkList}> Get notified on this email address</p>
+                                    <span className='mx-2 bg-gray-600 p-3' style={{ borderRadius: "50%" }}>
+                                        <Link> <InstagramIcon /></Link>
+                                    </span>
 
+                                    <span className='mx-2 bg-gray-600 p-3' style={{ borderRadius: "50%" }}>
+                                       <Link> <XIcon /></Link>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style={styles.secondColumns}>
+                            <h1 className='text-2xl font-semibold mb-10'>Links</h1>
+                            <ul className='text-m' style={styles.linkList}>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'>Home</span> </Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'>About</span>  </Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'>Services</span>  </Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'> Blog</span> </Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'>Projects</span> </Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'> &#8594; <span className='mx-1'>Contact</span> </Link> </li>
+                            </ul>
+                        </div>
+
+                        <div style={styles.secondColumns}>
+                            <h1 className='text-2xl font-semibold mb-10'>Services</h1>
+                            <ul className='text-m' style={styles.linkList}>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'>&#8594; <span className='mx-1'> Projects</span></Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'>&#8594; <span className='mx-1'> For our society</span></Link> </li>
+                                <li className='mb-2'> <Link className='hover:text-gray-300'>&#8594; <span className='mx-1'> For us</span></Link></li>
+                            </ul>
+                        </div>
+
+                        <div style={styles.secondColumns}>
+                            <h1 className='text-2xl font-semibold mb-10'>Have a Questions?</h1>
+                            <ul className='text-m' style={styles.linkList}>
+                                <li className='mb-4'> <Link className='hover:text-gray-300'><LocationOnIcon /><span className='mx-1'> 203 Fake St. Mountain View, San Francisco, California, USA</span></Link> </li>
+                                <li className='mb-4'> <Link className='hover:text-gray-300'> <CallIcon />	<span className='mx-1'>+2 392 3929 210</span></Link> </li>
+                                <li className='mb-4'> <Link className='hover:text-gray-300'> <MailIcon /><span className='mx-1'>  info@yourdomain.com</span></Link></li>
+                            </ul>
                         </div>
                     </div>
 
                 </div>
 
-                <div className='flex justify-start px-20'>
-                    <p className='text-sm w-full' style={styles.linkList}>copyright © 2024 | All rights reserved |
-                        <Link className='text-blue-400 hover:text-red-700'> know more.. </Link> </p>
-                    <div className='flex justify-end'>
-                        <Link><XIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
-                        <Link><FacebookIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
-                        <Link> <InstagramIcon className='hover:text-red-700' style={styles.socialIcons} /></Link>
-                    </div>
+                <div className=' w-full mt-5 flex mb-10 text-m justify-center text-center'>
+                    <p className='text-m w-full' style={styles.linkList}>copyright © 2024 | All rights reserved | This is made with &#9829; by
+                        <Link className='hover:text-gray-300'> Vikash Yadav </Link> </p>
                 </div>
-
-                {/* {status ? (
-             <SnackBar handleClose={handleClose} variant="filled" severity="success" sx={{ width: '100%' }} open={open} message={message} />
-           ) : 
-           (
-            <SnackBar handleClose={handleClose} variant="filled" severity="error" sx={{ width: '100%' }} open={open} message={message} />
-           )
-           } */}
 
             </footer>
         </>
@@ -133,41 +81,33 @@ const Footer = (props) => {
 }
 const styles = {
     footer: {
-        backgroundColor: '#333',
+        backgroundColor: '#111',
         color: '#fff',
-        padding: '50px ',
+        padding: ' 60px 40px',
         fontFamily: 'Arial, sans-serif',
-    },
-    firstDiv: {
-        textAlign: 'center',
-        width: '100%',
+
     },
     secondDiv: {
         color: '#fff',
-        padding: '40px 40px ',
-        fontFamily: 'Arial, sans-serif',
-    },
-    container: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'flex-start',
-        flexWrap: 'wrap'
     },
     secondContainer: {
-        padding: '50px 10px',
+        padding: '50px 0px',
+        marginLeft: "0px",
         display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'flex-start',
-        flexWrap: 'wrap',
-        width: '100%',
+        flexWrap: 'wrap'
     },
     secondColumns: {
         flex: '1',
-        margin: '0 0px',
+        margin: '0 10px',
+
     },
     column: {
         flex: '1',
         margin: '0 20px',
+    },
+    aboutinfo: {
+        color: 'rgb(166, 168, 169)',
+        lineHeight: "30px"
     },
     linkList: {
         listStyle: 'none',
