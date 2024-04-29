@@ -32,7 +32,7 @@ const Footer = (props) => {
         <>
             <footer style={styles.footer}>
                 <div style={styles.firstDiv}>
-                    <div style={styles.container}>
+                    {/* <div style={styles.container}>
 
                         <div style={styles.column}>
                             <h3 className='text-sky-300 mb-2'> <CallIcon /> </h3>
@@ -55,7 +55,7 @@ const Footer = (props) => {
                                 29, abc complex, near ctm cross road, ahmedabad
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div style={styles.secondDiv}>

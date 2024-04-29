@@ -5,10 +5,12 @@
 * {
     margin: 0;
     scroll-behavior: smooth;
-    font-family: 'Roboto'
+    /* font-family: 'Roboto' */
   }
 
-  
+  /* *{
+    background-color: #f4f1f1;
+} */
 /* body {
     cursor: url("./images/cursor.png") 100 100, auto;
   } */
