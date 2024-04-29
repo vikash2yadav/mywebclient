@@ -28,6 +28,7 @@ const Contact = (props) => {
 
         <div className='mt-5' style={styles.formContainer}>
           <form style={styles.form}>
+            <p className='text-xs font-semibold text-red-600 mb-1'>We will find you.</p>
             <div style={styles.inputGroup}>
               <input type="text"
                 placeholder='Name'

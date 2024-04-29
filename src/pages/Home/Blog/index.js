@@ -1,5 +1,6 @@
 import React from 'react'
 import BlogBox from "../../../components/BlogBox"
+import Button from "../../../components/Button"
 
 const Blog = (props) => {
     return (
@@ -19,6 +20,13 @@ const Blog = (props) => {
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A BEGINNER" description="Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean." />
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A " description="Separated they live in Bookmarksgrove right at the coast ." />
                     <BlogBox date="APRIL 14, 2018" feild="WEB DESIGN" title="WORDPRESS FOR A BEGINNER" description="Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean." />
+                {/* <Button
+                    style={{
+                        textAlign: 'center', border: "1px solid red",
+                        transition: 'all 0.5s'
+                    }}
+                    className="font-semibold font-sans w-full p-4 mt-5 bg-red-600 text-white hover:bg-white hover:text-gray-700"
+                    label="Load More " /> */}
                 </div>
             </div>
         </>
