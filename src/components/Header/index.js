@@ -14,23 +14,29 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [
-  { component: 'Home', route: "/" },
-  { component: "About", to: '#about' },
-  { component: "Service", to: '#service' },
-  { component: "Project", route: '/projects' },
-   {component:"Blog", route: '/blog'},
-   {component:"Contact", route: '/contact'},
+  { component: 'Home', to: "home" },
+  { component: "About", to: 'about' },
+  { component: "Service", to: 'service' },
+  { component: "Project", to: 'project' },
+   {component:"Blog", to: 'blog'},
+   {component:"Contact", to: 'contact'},
 
 ]
 
 const Header = (props) => {
-  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -48,7 +54,7 @@ const Header = (props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.component} />
+              <ListItemText primary={item.component} onClick={() => scrollToSection(item.to)} key={item} style={{ color: 'black' }} ></ListItemText>
             </ListItemButton>
           </ListItem>
         ))}
@@ -87,9 +93,7 @@ const Header = (props) => {
             {navItems.map((item) => (
 
               <Button
-                onClick={() => {
-                  navigate(item.route)
-                }} key={item} style={{ color: 'black' }} >
+              onClick={() => scrollToSection(item.to)} key={item} style={{ color: 'black' }} >
                 {item.component}
               </Button>
 

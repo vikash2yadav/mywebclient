@@ -47,11 +47,11 @@ const RotatingText2 = styled.p`
 const MainBox = () => {
   return (
     <>
-      <StyledMainBox>
+      <StyledMainBox id="home">
         <div className="flex justify-center items-center bg-gray-200 p-40 text-center" style={{ background: 'linear-gradient(to left, white 50%, #e6e1e1 50%)' }}>
           <div className="text-xl text-gray-700 px-10">
-            <h1 style={{ fontFamily: "Arial, sans-serif", letterSpacing: "0.2em", fontWeight: "800" }} className="text-sm font-semibold mb-4 text-red-600">HEY! I AM</h1>
-            <RotatingText2 style={{ fontFamily: "Arial, sans-serif", fontWeight: "700"}} className="text-4xl mb-0"></RotatingText2>
+            <h1 style={{ fontFamily: "Arial, sans-serif", letterSpacing: "0.2em", fontWeight: "800" }} className="text-m font-semibold mb-4 text-red-600">HEY! I AM</h1>
+            <RotatingText2 style={{ fontFamily: "Arial, sans-serif", fontWeight: "700"}} className="text-5xl mb-0"></RotatingText2>
             <RotatingText className="mb-8 font-semibold"></RotatingText>
             <Button
               className="py-3 px-6 border border-solid border-1 border-red-600 bg-red-600 text-white hover:bg-white hover:text-gray-700 transition-all duration-500"

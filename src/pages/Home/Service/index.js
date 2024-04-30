@@ -4,7 +4,7 @@ import ServiceBox from '../../../components/ServiceBox'
 const Service = () => {
   return (
     <>
-      <div id="#service" style={styles.maindiv}>
+      <div style={styles.maindiv} id="service">
         <h1 style={{ fontSize: "40px" }} className='text-xl text-center mb-4 text-gray-700 font-serif font-semibold' >My Services</h1>
 
         <div className='w-full h-1 mb-8 flex justify-center '>
@@ -32,7 +32,7 @@ const styles = {
     height: 'auto',
     backgroundColor: '#fff',
     // display: 'flex',
-    padding: "100px 20px",
+    padding: "200px 20px",
   },
   seconddiv: {
     display: 'flex',

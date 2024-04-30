@@ -4,7 +4,7 @@ import SkillBox from '../../../components/SkillBox'
 const Skills = () => {
   return (
     <>
-      <div style={styles.maindiv}>
+      <div style={styles.maindiv} id="skill">
         <h1 style={{fontSize: '40px'}} className='text-xl mb-4 text-center font-serif text-gray-700 font-semibold '>My Skills</h1>
           
         <div className='w-full h-1 mb-8 flex justify-center '>

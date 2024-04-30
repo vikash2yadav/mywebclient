@@ -11,7 +11,7 @@ import TextArea from "../../../components/TextArea"
 const Contact = (props) => {
   return (
     <>
-      <div style={styles.maindiv}>
+      <div style={styles.maindiv} id="contact">
         <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Contact Me</h1>
         <div className='w-full h-1 mb-8 flex justify-center '>
           <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
@@ -66,7 +66,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     backgroundColor: '#fff',
-    padding: "100px 20px",
+    padding: "200px 20px",
   },
   seconddiv: {
     display: 'flex',

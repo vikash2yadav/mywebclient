@@ -5,7 +5,7 @@ import Button from "../../../components/Button"
 const Blog = (props) => {
     return (
         <>
-            <div style={styles.maindiv}>
+            <div style={styles.maindiv} id="blog">
                 <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Our Blogs</h1>
 
                 <div className='w-full h-1 mb-8 flex justify-center '>
@@ -31,8 +31,7 @@ const styles = {
         width: '100%',
         height: 'auto',
         backgroundColor: '#fff',
-        padding: "100px 20px",
-        marginBottom: "100px"
+        padding: "200px 20px",
     },
     seconddiv: {
         display: 'flex',

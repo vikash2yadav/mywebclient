@@ -79,7 +79,7 @@ import Button from '../../../components/Button'
 const About = () => {
   return (
     <>
-      <StyledDiv>
+      <StyledDiv id="about">
         <h1 style={{ fontSize: "40px" }} className='text-xl mb-4 text-center text-gray-700 font-semibold font-serif' >About Me</h1>
         <div className='w-full h-1 mb-20 flex justify-center'>
           <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
@@ -131,7 +131,7 @@ const StyledDiv = styled.div`
   width: 100%;
   height: auto;
   background-color: #fff;
-  padding: 120px 100px;
+  padding: 200px 100px;
 
   @media (max-width: 400px) {
     padding: 100px 40px ;
