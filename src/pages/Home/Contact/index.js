@@ -1,4 +1,6 @@
-import React from 'react';
+// Contact.js
+
+import React, { useEffect, useState } from 'react';
 import Button from '../../../components/Button';
 import Box from "../../../components/Box"
 import CallIcon from '@mui/icons-material/Call';
@@ -9,22 +11,33 @@ import Input from "../../../components/Input"
 import TextArea from "../../../components/TextArea"
 
 const Contact = (props) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(scrollTop > 500); // Adjust the value as per your requirement
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <div style={styles.maindiv} id="contact">
         <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Contact Me</h1>
         <div className='w-full h-1 mb-8 flex justify-center '>
-          <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'>
-          </div>
+          <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'></div>
         </div>
 
         <p className='mb-20 text-center text-gray-400 text-m'>These all are services, which is provided by me. if you want help contact me. </p>
 
         <div style={styles.seconddiv} className='mb-20'>
-          <Box logo={<LocationOnIcon />} title="Address" add="198 West 21th Street, Suite 721 New York NY 10016" />
-          <Box logo={<CallIcon />} title="Contact Number" description="29384349" />
-          <Box logo={<MailIcon />} title="Email Address" description="vikash293@edfm.cdkc" />
-          <Box logo={<TfiWorld />} title="Website" description="www.google.com" />
+          <Box logo={<LocationOnIcon />} title="Address" add="198 West 21th Street, Suite 721 New York NY 10016" className={isVisible ? 'contact-item visible' : 'contact-item'} />
+          <Box logo={<CallIcon />} title="Contact Number" description="29384349" className={isVisible ? 'contact-item visible' : 'contact-item'} />
+          <Box logo={<MailIcon />} title="Email Address" description="vikash293@edfm.cdkc" className={isVisible ? 'contact-item visible' : 'contact-item'} />
+          <Box logo={<TfiWorld />} title="Website" description="www.google.com" className={isVisible ? 'contact-item visible' : 'contact-item'} />
         </div>
 
 

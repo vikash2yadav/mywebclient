@@ -1,6 +1,5 @@
 import React from 'react'
 import BlogBox from "../../../components/BlogBox"
-import Button from "../../../components/Button"
 
 const Blog = (props) => {
     return (

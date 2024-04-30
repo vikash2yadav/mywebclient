@@ -55,7 +55,7 @@ const MainBox = () => {
             <RotatingText className="mb-8 font-semibold"></RotatingText>
             <Button
               className="py-3 px-6 border border-solid border-1 border-red-600 bg-red-600 text-white hover:bg-white hover:text-gray-700 transition-all duration-500"
-              label="View Works"
+              label="Hello !"
             />
           </div>
         </div>

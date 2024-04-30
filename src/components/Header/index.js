@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@mui/material';
+import { Button, Select } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,8 +21,8 @@ const navItems = [
   { component: "About", to: 'about' },
   { component: "Service", to: 'service' },
   { component: "Project", to: 'project' },
-   {component:"Blog", to: 'blog'},
-   {component:"Contact", to: 'contact'},
+  { component: "Blog", to: 'blog' },
+  { component: "Contact", to: 'contact' },
 
 ]
 
@@ -93,18 +93,25 @@ const Header = (props) => {
             {navItems.map((item) => (
 
               <Button
-              onClick={() => scrollToSection(item.to)} key={item} style={{ color: 'black' }} >
+                sx={{
+                  color: 'black',
+                  textTransform: 'uppercase',
+                  '&:hover': {
+                    color: 'red',
+                    backgroundColor: 'transparent',
+                    borderBottom: "2px solid red",
+                    borderRadius: " 0px",
+                    fontWeight: "bold",
+                  },
+                }}
+                onClick={() => scrollToSection(item.to)}
+                key={item}
+              >
                 {item.component}
               </Button>
+              
 
             ))}
-
-            <button
-              className=' mx-3 px-10 py-2 bg-red-600 text-white hover:bg-white hover:text-gray-700'
-              style={{
-                border: "1px solid white",
-                transition: 'all 0.5s'
-              }}>Let`s Talk</button>
           </Box>
 
         </Toolbar>

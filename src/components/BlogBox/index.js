@@ -1,9 +1,10 @@
 import React from 'react'
+import "./blog.css"
 
 const BlogBox = (props) => {
   return (
     <>
-      <div className='mx-5 h-30 hover:shadow-md' style={styles.maindiv} >
+      <div className='blog-box mx-5 h-30 hover:shadow-md' style={styles.maindiv} >
         <div style={styles.imageMainDiv}>
           <div style={{ width: "100%", height: "150px" }}
             className='mb-5 bg-red-100 flex '

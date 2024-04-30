@@ -37,7 +37,7 @@ const Works = () => {
 
                 <div style={styles.seconddiv} className='mb-20'>
                     <SmallBox title="10" description="Awards" />
-                    <SmallBox title="2" description="Complete Projects" /> 
+                    <SmallBox title="2" description="Complete Projects" />
                     <SmallBox title="4" description="Happy Customers" />
                     <SmallBox title="300" description="Cups of tea" />
                 </div>
