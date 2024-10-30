@@ -58,3 +58,26 @@ export const aboutUsData = [
       "  When I'm not coding, you can find me exploring tech blogs, diving into new programming languages, or experimenting with the latest frameworks. I’m also a tea and coffee enthusiast, fueled by caffeine and creativity!",
   },
 ];
+
+export const servicesData = [
+  {
+    src: "https://e7.pngegg.com/pngimages/227/326/png-clipart-website-development-mobile-app-development-application-software-web-application-web-design-web-design-logo.png",
+    title: "Web & Mobile Design",
+    description: "This is ecommerce web application",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFag6YWZ5i97XfY_gc_fPPlaPvNxPv9FkD5NyCKYbZCg&s",
+    title: "E-commerce",
+    description: "We are working for ecommerce",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFag6YWZ5i97XfY_gc_fPPlaPvNxPv9FkD5NyCKYbZCg&s",
+    title: "Web Development",
+    description: "We are working for ecommerce",
+  },
+  {
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFag6YWZ5i97XfY_gc_fPPlaPvNxPv9FkD5NyCKYbZCg&s",
+    title: "SEO Services",
+    description: "Optimizing your website for better search engine visibility.",
+  },
+];

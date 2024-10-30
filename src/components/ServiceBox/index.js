@@ -1,31 +1,44 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceBox = (props) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <>
-      <Link>
-        <div className='mx-5 h-30 hover:bg-blue-600 hover:shadow-md hover:-translate-y-2' style={styles.maindiv} >
-          <div style={styles.imageMainDiv}>
-            <img style={{ width: "80px", height: "80px", borderRadius: "50%" }}
-              className='mb-5'
-              src={props.logo} alt="" />
-          </div>
-          <h1 className='text-black text-m mb-1'>{props.title}</h1>
-
-            <div className='w-full h-0.5 mb-8 flex justify-center '>
-          <div className='w-8 h-0.5 bg-red-700 mb-20 text-center rounded-lg'>
-          </div>
+    <Link>
+      <div
+        className='mx-5 h-30 hover:shadow-md hover:-translate-y-2'
+        style={{
+          ...styles.maindiv,
+          backgroundColor: isHovered ? 'red' : 'transparent', // Change background color on hover
+          color: isHovered ? 'white' : 'black', // Change text color on hover
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div style={styles.imageMainDiv}>
+          <img
+            style={{ width: "80px", height: "80px", borderRadius: "50%" }}
+            className='mb-5'
+            src={props.logo}
+            alt=""
+          />
         </div>
-
-          <p className='text-xl text-gray-500'>
-            {props.description}
-          </p>
+        <h1 className='text-m mb-1'>{props.title}</h1>
+        <div className='w-full h-0.5 mb-8 flex justify-center'>
+          <div
+            className='bar w-8 h-0.5 rounded-lg'
+            style={{
+              backgroundColor: isHovered ? 'white' : '#b91c1c', // Change bar color on hover
+              transition: 'background-color 0.5s', // Smooth transition
+            }}
+          ></div>
         </div>
-      </Link>
-    </>
-  )
-}
+        <p className='text-xl'>{props.description}</p>
+      </div>
+    </Link>
+  );
+};
 
 const styles = {
   maindiv: {
@@ -37,13 +50,13 @@ const styles = {
     fontFamily: "Arial",
     height: "300px",
     transition: 'all 0.5s',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)', 
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
   },
   imageMainDiv: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   }
-}
+};
 
-export default ServiceBox
+export default ServiceBox;

@@ -8,7 +8,7 @@ const About = () => {
 
   const handleDownload = () => {
     const cvUrl = './Hire_me.pdf'; 
-    const link = document.createElement('a');
+    const link = document.createElement('a'); 
     link.href = cvUrl;
     link.download = 'Vikash_CV.pdf'; 
     document.body.appendChild(link);
