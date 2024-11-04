@@ -7,14 +7,14 @@ const About = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleDownload = () => {
-    const cvUrl = './Hire_me.pdf'; 
-    const link = document.createElement('a'); 
+    const cvUrl = "./Hire_me.pdf";
+    const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = 'Vikash_CV.pdf'; 
+    link.download = "Vikash_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-};
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,18 +68,19 @@ const About = () => {
                   {item?.title}
                 </summary>
                 <p className="mt-2 pl-4 py-2 text-m text-gray-500">
-                  <span className="font-semibold text-gray-700">{item?.schoolName}</span> - {item?.description}
+                  <span className="font-semibold text-gray-700">
+                    {item?.schoolName}
+                  </span>{" "}
+                  - {item?.description}
                 </p>
-                <p className="pl-4 py-2 text-m text-gray-500">
-                  {item?.detail}
-                </p>
+                <p className="pl-4 py-2 text-m text-gray-500">{item?.detail}</p>
               </details>
             </>
           ))}
         </div>
 
         <h1 className="text-xl font-semibold animate-on-scroll">
-          <span style={{ color: "red" }}>10</span> Projects completed
+          <span style={{ color: "red" }}>4</span> Projects completed
         </h1>
         <Button
           variant="outlined"

@@ -18,8 +18,8 @@ const ServiceBox = (props) => {
       >
         <div style={styles.imageMainDiv}>
           <img
-            style={{ width: "80px", height: "80px", borderRadius: "50%" }}
-            className='mb-5'
+            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
+            className='mb-8'
             src={props.logo}
             alt=""
           />
@@ -48,7 +48,7 @@ const styles = {
     textAlign: "center",
     width: "300px",
     fontFamily: "Arial",
-    height: "300px",
+    height: "350px",
     transition: 'all 0.5s',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
   },

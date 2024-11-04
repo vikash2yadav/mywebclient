@@ -15,6 +15,7 @@
   
   .img {
     animation: fadeInUp 1s ;
+    transform: scale(0.9); 
   }
   
   /* .small-box {
@@ -22,5 +23,5 @@
   } */
   
   .img:hover {
-    transform: scale(1.1); /* Scale the image to 110% of its original size */
+    transform: scale(1); 
 }

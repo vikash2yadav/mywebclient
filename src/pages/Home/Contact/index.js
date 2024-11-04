@@ -1,117 +1,184 @@
-// Contact.js
-
-import React, { useEffect, useState } from 'react';
-import Button from '../../../components/Button';
-import Box from "../../../components/Box"
-import CallIcon from '@mui/icons-material/Call';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import MailIcon from '@mui/icons-material/Mail';
-import { TfiWorld } from "react-icons/tfi";
-import Input from "../../../components/Input"
-import TextArea from "../../../components/TextArea"
+import React, { useEffect, useState } from "react";
+import Button from "../../../components/Button";
+import Box from "../../../components/Box";
+import Input from "../../../components/Input";
+import TextArea from "../../../components/TextArea";
+import { contactDetailsData } from "../../../constant/sampleData";
+import emailjs from "emailjs-com";
 
 const Contact = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setIsVisible(scrollTop > 500); // Adjust the value as per your requirement
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(scrollTop > 500);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
+      .then((response) => {
+        setSuccessMessage("Message sent successfully!");
+        setErrorMessage("");
+        setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form
+      })
+      .catch((err) => {
+        setErrorMessage("Failed to send message. Please try again.");
+        setSuccessMessage("");
+      });
+  };
 
   return (
     <>
       <div style={styles.maindiv} id="contact">
-        <h1 id={`${props.title}`} style={{ fontSize: "40px" }} className='text-xl text-center font-serif mb-4 text-gray-700 font-semibold'>Contact Me</h1>
-        <div className='w-full h-1 mb-8 flex justify-center '>
-          <div className='w-10 h-1 bg-red-700 mb-20 text-center rounded-lg'></div>
+        <h1
+          id={`${props.title}`}
+          className="text-5xl text-center font-serif mb-4 text-gray-700 font-semibold"
+        >
+          Contact Me
+        </h1>
+        <div className="w-full h-1 mb-8 flex justify-center ">
+          <div className="w-10 h-1 bg-red-700 mb-20 text-center rounded-lg"></div>
         </div>
 
-        <p className='mb-20 text-center text-gray-400 text-m'>These all are services, which is provided by me. if you want help contact me. </p>
+        <p className="mb-20 text-center text-gray-400 text-m">
+          🌟 I offer a range of services tailored to meet your needs. If you're
+          looking for assistance or collaboration, don't hesitate to reach
+          out—let's create something amazing together!
+        </p>
 
-        <div style={styles.seconddiv} className='mb-20'>
-          <Box logo={<LocationOnIcon />} title="Address" add="198 West 21th Street, Suite 721 New York NY 10016" className={isVisible ? 'contact-item visible' : 'contact-item'} />
-          <Box logo={<CallIcon />} title="Contact Number" description="29384349" className={isVisible ? 'contact-item visible' : 'contact-item'} />
-          <Box logo={<MailIcon />} title="Email Address" description="vikash293@edfm.cdkc" className={isVisible ? 'contact-item visible' : 'contact-item'} />
-          <Box logo={<TfiWorld />} title="Website" description="www.google.com" className={isVisible ? 'contact-item visible' : 'contact-item'} />
+        <div style={styles.seconddiv} className="mb-20">
+          {contactDetailsData.map((item) => (
+            <Box
+              key={item.title} // Add key prop for mapping
+              logo={item?.icon}
+              title={item?.title}
+              add={item?.add}
+              description={item?.description}
+              className={isVisible ? "contact-item visible" : "contact-item"}
+            />
+          ))}
         </div>
 
-
-        <div className='mt-5' style={styles.formContainer}>
-          <form style={styles.form}>
-            <p className='text-xs font-semibold text-red-600 mb-1'>We will find you.</p>
+        <div className="mt-5" style={styles.formContainer}>
+          <form style={styles.form} onSubmit={handleSubmit}>
+            <p className="text-xs font-semibold text-red-600 mb-1">
+              Get in Touch!
+            </p>
             <div style={styles.inputGroup}>
-              <Input type="text"
-                placeholder='Name'
+              <Input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
                 style={styles.input}
-                className='mx-0' />
-              <Input type="email"
-                placeholder='Email'
+                className="mx-0"
+              />
+              <Input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
                 style={styles.input}
-                className='mx-0' />
-              <Input type="tel"
-                placeholder='Phone'
+                className="mx-0"
+              />
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
+                onChange={handleChange}
                 style={styles.input}
-                className='mx-0' />
-              <TextArea className=''
+                className="mx-0"
+              />
+              <TextArea
+                name="message"
                 style={{ ...styles.input, height: "100px" }}
-                placeholder='Message' />
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+              />
             </div>
-            <div style={{ textAlign: 'center' }}>
-
-              <Button label="Send"
-                className="bg-red-600 hover:bg-white hover:text-gray-700 w-full border border-solid border-1 border-red-600 px-4 py-2 font-serif text-white rounded-lg" />
-
+            {successMessage && (
+              <p className="text-green-600">{successMessage}</p>
+            )}
+            {errorMessage && <p className="text-red-600">{errorMessage}</p>}
+            <div style={{ textAlign: "center" }}>
+              <Button
+                label="Send"
+                className="bg-red-600 hover:bg-white hover:text-gray-700 w-full border border-solid border-1 border-red-600 px-4 py-2 font-serif text-white rounded-lg"
+              />
             </div>
           </form>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 const styles = {
   maindiv: {
-    width: '100%',
-    height: 'auto',
-    backgroundColor: '#fff',
-    padding: "200px 20px",
+    width: "100%",
+    height: "auto",
+    backgroundColor: "#fff",
+    padding: "100px 20px",
+    "@media (max-width: 400px)": {
+      padding: "0px 20px",
+    },
   },
   seconddiv: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: 'space-evenly',
+    justifyContent: "space-evenly",
   },
   formContainer: {
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
   },
   form: {
-    width: '100%',
-    maxWidth: '500px',
+    width: "100%",
+    maxWidth: "500px",
   },
   inputGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: '3px',
+    display: "flex",
+    flexDirection: "column",
+    marginBottom: "3px",
   },
   input: {
-    color: 'black',
+    color: "black",
     padding: "10px",
-    backgroundColor: '#f4f1f1',
-    border: '0.5px solid gray',
+    backgroundColor: "#f4f1f1",
+    border: "0.5px solid gray",
     borderRadius: "5px",
-    marginBottom: '8px',
-    width: '100%',
+    marginBottom: "8px",
+    width: "100%",
   },
   button: {
     width: "100%",
-  }
-}
+  },
+};
 
 export default Contact;
