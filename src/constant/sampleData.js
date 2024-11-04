@@ -152,25 +152,40 @@ export const projectDetailInfo = [
 export const blogsData = [
   {
     date: "April 14 ,2000",
-    feild: "web design",
-    title: "RENOVATING NATIONAL GALLERY",
+    feild: "Full Stack Development",
+    title: " Building My First Full Stack Application",
     description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      "A deep dive into my journey of creating a full stack application from scratch, discussing challenges, tools used, and lessons learned along the way.",
   },
   {
     date: "April 14, 2018",
-    feild: "web design",
-    title: "WORDPRESS FOR A BEGINNER",
+    feild: "Web Development",
+    title: "Best Practices for Full Stack Developers",
     description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      "Exploring the principles of designing robust and scalable APIs, including RESTful practices and GraphQL.",
   },
   {
     date: "April 14, 2018",
-    feild: "web design",
-    title: "WORDPRESS FOR A",
+    feild: "Performance Optimization",
+    title: "Frontend and Backend Strategies",
     description:
-      "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      "Techniques and tools I use to enhance application performance on both the client and server sides.",
   },
+  {
+    date: "April 14, 2018",
+    feild: "DevOps",
+    title: "Streamlining Your Workflow",
+    description:
+      "An overview of how integrating DevOps practices has transformed my development process and improved deployment efficiency.",
+  },
+  {
+    date: "April 14, 2018",
+    feild: "Cybersecurity",
+    title: "Essential Practices for Full Stack Developers",
+    description:
+      "A guide to the most important security measures that every full stack developer should implement in their projects.",
+  },
+
 ];
 
 export const contactDetailsData = [
