@@ -82,9 +82,9 @@ const Contact = (props) => {
 
         <div className="mt-5" style={styles.formContainer}>
           <form style={styles.form} onSubmit={handleSubmit}>
-            <p className="text-xs font-semibold text-red-600 mb-1">
+            {/* <p className="text-sm font-semibold text-red-600 mb-1">
               Get in Touch!
-            </p>
+            </p> */}
             <div style={styles.inputGroup}>
               <Input
                 type="text"
@@ -128,7 +128,7 @@ const Contact = (props) => {
             <div style={{ textAlign: "center" }}>
               <Button
                 label="Send"
-                className="bg-red-600 hover:bg-white hover:text-gray-700 w-full border border-solid border-1 border-red-600 px-4 py-2 font-serif text-white rounded-lg"
+                className="bg-red-600 hover:bg-white hover:text-gray-700 w-full p-3 border border-solid border-1 border-red-600 font-serif text-white rounded-lg"
               />
             </div>
           </form>
@@ -160,7 +160,7 @@ const styles = {
   },
   form: {
     width: "100%",
-    maxWidth: "500px",
+    maxWidth: "800px",
   },
   inputGroup: {
     display: "flex",
@@ -169,14 +169,11 @@ const styles = {
   },
   input: {
     color: "black",
-    padding: "10px",
+    padding: "20px",
     backgroundColor: "#f4f1f1",
     border: "0.5px solid gray",
     borderRadius: "5px",
     marginBottom: "8px",
-    width: "100%",
-  },
-  button: {
     width: "100%",
   },
 };

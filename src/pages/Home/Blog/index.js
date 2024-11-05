@@ -42,7 +42,7 @@ const styles = {
   maindiv: {
     width: "100%",
     height: "auto",
-    backgroundColor: "#fff",
+    backgroundColor: "#f0f0f0",
     padding: "100px 20px",
     "@media (max-width: 400px)": {
       padding: "0px 20px",

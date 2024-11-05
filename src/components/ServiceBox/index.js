@@ -10,7 +10,7 @@ const ServiceBox = (props) => {
         className='mx-5 h-30 hover:shadow-md hover:-translate-y-2'
         style={{
           ...styles.maindiv,
-          backgroundColor: isHovered ? 'red' : 'transparent', // Change background color on hover
+          backgroundColor: isHovered ? 'red' : 'white', // Change background color on hover
           color: isHovered ? 'white' : 'black', // Change text color on hover
         }}
         onMouseEnter={() => setIsHovered(true)}

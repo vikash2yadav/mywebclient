@@ -47,7 +47,7 @@ const Service = () => {
 const StyledDiv = styled.div`
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background-color: #f0f0f0;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transform: ${({ isVisible }) =>
     isVisible ? "translateY(0px)" : "translateY(40px)"};
